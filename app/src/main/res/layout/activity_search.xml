@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.aavgeensingh.moviac.SearchActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:padding="0dp"
+        android:layout_height="35dp"
+        android:hint="Name.."
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:id="@+id/searchName"
+        android:background="#22ff0000"
+        android:gravity="center_vertical"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Search"
+        android:id="@+id/searchButton"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#220000ff"
+            android:id="@+id/searchResults">
+        </android.support.v7.widget.RecyclerView>
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/loadbar"
+                android:id="@+id/loading"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
